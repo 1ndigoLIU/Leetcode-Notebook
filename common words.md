@@ -8,3 +8,5 @@ anagram /ˈæn.ə.ɡræm/ a word or phrase made by using the letters of another 
 consecutive /kənˈsek.jə.t̬ɪv/ used to describe events, numbers, etc. that follow one after another without an interruption
 
 vertical /ˈvɝː.t̬ə.kəl/ standing or pointing straight up or at an angle of 90° to a horizontal surface or line
+
+triplet /ˈtrɪp.lət/ A group of three associated things; especially in mathematics, computing, or linguistics, a set of three elements considered together.
