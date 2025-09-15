@@ -91,3 +91,98 @@ print(st)  # {1, 2, 3}
 
 **时间复杂度**：O(1)
 容器对象内部都维护了长度属性，无需遍历
+
+### `Counter`统计
+
+`Counter` 是 Python 标准库 `collections` 模块里的一个类，常用来 **统计可迭代对象中元素出现的次数**，功能类似于一个字典，但针对计数做了优化。
+
+#### 1. 基本用法
+
+```python
+from collections import Counter
+
+data = ['a', 'b', 'c', 'a', 'b', 'a']
+counter = Counter(data)
+print(counter)  
+# 输出: Counter({'a': 3, 'b': 2, 'c': 1})
+```
+
+它返回一个类似字典的对象，**键是元素，值是出现次数**。
+
+#### 2. 统计字符串
+
+```python
+s = "mississippi"
+c = Counter(s)
+print(c)  
+# Counter({'i': 4, 's': 4, 'p': 2, 'm': 1})
+```
+
+可以快速统计每个字符出现的频率。
+
+---
+
+#### 3. 常用方法
+
+* **most\_common(n)**
+  返回出现频率最高的 n 个元素：
+
+  ```python
+  c.most_common(2)
+  # [('i', 4), ('s', 4)]
+  ```
+
+* **elements()**
+  返回一个迭代器，将每个元素按出现次数重复：
+
+  ```python
+  list(c.elements())
+  # ['m', 'i', 'i', 'i', 'i', 's', 's', 's', 's', 'p', 'p']
+  ```
+
+* **update()**
+  可以用来增加计数：
+
+  ```python
+  c.update("pp")
+  print(c)
+  # Counter({'i': 4, 's': 4, 'p': 4, 'm': 1})
+  ```
+
+* **subtract()**
+  减少计数：
+
+  ```python
+  c.subtract("is")
+  print(c)
+  # Counter({'s': 3, 'i': 3, 'p': 4, 'm': 1})
+  ```
+
+#### 4. 与数学运算结合
+
+`Counter` 可以进行集合运算（交集、并集等），对计数有意义：
+
+```python
+a = Counter("apple")
+b = Counter("pear")
+
+print(a + b)   # 计数相加
+# Counter({'p': 3, 'a': 2, 'l': 1, 'e': 2, 'r': 1})
+
+print(a - b)   # 相减（负数会被去掉）
+# Counter({'p': 1, 'l': 1})
+
+print(a & b)   # 交集：取最小值
+# Counter({'a': 1, 'p': 1, 'e': 1})
+
+print(a | b)   # 并集：取最大值
+# Counter({'p': 2, 'a': 1, 'l': 1, 'e': 1, 'r': 1})
+```
+
+#### 5. 应用场景
+
+* 文本词频统计（自然语言处理）
+* 数据去重和频率分析
+* 找出最常见元素
+* 简化需要手动写字典统计的逻辑
+
