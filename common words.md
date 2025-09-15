@@ -10,3 +10,5 @@ consecutive /kənˈsek.jə.t̬ɪv/ used to describe events, numbers, etc. that f
 vertical /ˈvɝː.t̬ə.kəl/ standing or pointing straight up or at an angle of 90° to a horizontal surface or line
 
 triplet /ˈtrɪp.lət/ A group of three associated things; especially in mathematics, computing, or linguistics, a set of three elements considered together.
+
+elevation /ˌel.əˈveɪ.ʃən/ the height of a place above the level of the sea
