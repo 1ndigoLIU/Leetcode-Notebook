@@ -73,7 +73,20 @@ print(st)  # {1, 2, 3}
 - 在没有严重哈希冲突的情况下，平均复杂度是 **O(1)**。
 - 最坏情况是 **O(n)**（所有元素都哈希冲突），但哈希函数设计得比较好时很少发生。
 
+### `dict()`字典 （hash表）
 
+查找 / 插入 / 删除：平均时间复杂度 O(1)
+
+```python
+# initialize
+count = {}
+
+# frequency count of numbers 频次统计
+count[num] = count.get(num, 0) + 1
+
+# if num hasn’t appeared before, count[num] doesn’t exist yet — that will raise a KeyError
+count[num] += 1
+```
 
 ### `len()`获取长度
 
