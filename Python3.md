@@ -20,7 +20,23 @@ print(d)
 - `list` 是工厂函数（callable），当访问一个不存在的键时，就会自动执行 `list()` 来生成默认值（即空列表 `[]`）。
 - 所以第一次访问 `d["a"]` 时，字典里没有 `"a"`，它会自动建立 `"a": []`，然后 `.append(1)` 就能直接用。
 
+### 数组切片slicing
 
+正常输出index：
+
+```python
+nums = [0,1,2,3,4,5]
+nums[:3] # [0, 1, 2] the first three elements of nums
+nums[3:] # [3, 4, 5] everything from index 3 to the end
+nums[1:3] # [1, 2] the sublist from index 1 through index 2
+
+nums[:-2] # [0, 1, 2, 3] everything except the last two
+nums[-2:] # [4, 5] the last two elements
+```
+
+当输入负数索引negative indexes：
+
+切片里的负数索引表示从尾部反向进行 counting from the **end of the sequence** instead of from the beginning
 
 ### `sorted(x)`
 
