@@ -219,3 +219,18 @@ print(a | b)   # 并集：取最大值
 * 找出最常见元素
 * 简化需要手动写字典统计的逻辑
 
+
+
+### random.randint
+
+`random.randint(a, b)` 是 Python 内置模块 `random` 里的一个函数，用来**生成一个在指定范围内的随机整数**。
+
+```python
+import random
+
+n = random.randint(a, b)
+```
+
+**参数 `a` 和 `b`**：两个整数，范围的左右端点，**包含端点**。
+
+返回值：`a <= n <= b` 的随机整数。
