@@ -62,6 +62,10 @@ sorted("cba")
 nums = [1, 2, 2, 3]
 st = set(nums)
 print(st)  # {1, 2, 3}
+
+st.add(5)
+s.remove(5) # 按值删除；若不存在会抛 KeyError
+s.discard(5) # 按值删除；若不存在什么也不做（更安全）
 ```
 
 **集合 (set)** 查找：
